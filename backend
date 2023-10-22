@@ -1,0 +1,6 @@
+FROM node
+COPY ./Conduit_NodeJS /app
+WORKDIR /app
+RUN npm install
+EXPOSE 3000
+CMD DB_HOST=192.168.10.244 USER_NAME=root PASSWORD=passwd npm start
